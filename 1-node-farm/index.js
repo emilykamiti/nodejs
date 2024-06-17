@@ -41,7 +41,7 @@ res.end('This is the OVERVIEW');
 } else if (pathName === '/product'){
 console.log('reaching here');
 res.end('This is the PRODUCT');
-}else if (pathName === '/api'){
+}else if (pathName === '/api'){ //added a simple api
 res.writeHead(200, {'Content-type': 'application/json'});
 res.end(data);
 } else{
