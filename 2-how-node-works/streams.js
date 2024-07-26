@@ -9,8 +9,8 @@ server.on('request', (req, res) => {
   //     res.end(data);
   //   });
 
-  //solution2:streams
-  //   const readable = fs.createReadStream('test-file.txt');
+  //solution2: streams;
+  //   const readable = fs.createReadStream('testt-file.txt');
   //   readable.on('data', (chunk) => {
   //     res.write(chunk);
   //   });
@@ -20,12 +20,12 @@ server.on('request', (req, res) => {
 
   //   readable.on('error', (err) => {
   //     console.log(err);
-  //     res.statuCode = 500;
+  //     res.statusCode = 500;
   //     res.end('file not found');
   //   });
   // });
 
-  //solution 3
+  //solution 3: Pipe method
   const readable = fs.createReadStream('test-file.txt');
   readable.pipe(res); //! Recommended way of using streams, pipe method.
 });
